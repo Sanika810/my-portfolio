@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanika Budhe | Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <div class="bg-canvas">
+        <div class="floating-icon">💻</div>
+        <div class="floating-icon">🚀</div>
+        <div class="floating-icon">⚡</div>
+        <div class="floating-icon">🎨</div>
+        <div class="floating-icon">🔥</div>
+        <div class="floating-icon">⚛️</div>
+        <div class="floating-icon">🌟</div>
+        <div class="floating-icon">💡</div>
+        <div class="floating-icon">🎯</div>
+        <div class="floating-icon">✨</div>
+    </div>
+
+    <header id="header">
+        <nav>
+            <div class="logo">Sanika Budhe | Developer Portfolio</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="avatar">
+                <img src="images/profile.png" alt="Profile Picture">
+            </div>
+            <h1>Hi, I'm Sanika</h1>
+            <div class="typewriter" id="typewriter"></div>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-avatar-container">
+                <div class="about-avatar" id="aboutAvatar">
+                    <img src="images/before.png" alt="Before" class="avatar-img visible">
+                    <img src="images/after.png" alt="After" class="avatar-img">
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>A Passionate Software Developer</h3>
+                <p>
+                    I’m a dedicated Web and Software Developer with a deep passion for creating interactive, aesthetic,
+                    and high-performance digital experiences. I love combining creativity with logic — designing
+                    interfaces that engage users and building systems that perform flawlessly behind the scenes.
+
+                    Every project is a new adventure in learning and innovation. I believe that great software is more
+                    than just code — it’s an experience that connects people, solves problems, and inspires ideas.
+                </p>
+                <p>
+                    Every project is an opportunity to learn, grow, and push the boundaries of what's possible on the
+                    web.
+                </p>
+            </div>
+        </div>
+
+        <div class="hanging-cards">
+            <div class="card">
+                <span class="card-icon"><img src="images/education.png" height="270px" width="300px"></span>
+                <h3>Education</h3>
+                <p>Bachelor's in Computer Science And Engineering<br>Visvesvaraya National Institute of Technology
+                    Nagpur<br>2023 - 2027</p>
+            </div>
+            <div class="card">
+                <span class="card-icon"><img src="images/creative.png" height="270px" width="300px"></span>
+                <h3>Experience</h3>
+                <p>Creative Secretory<br>Computer Science And Engineering Department<br>2025 - present</p>
+            </div>
+            <div class="card">
+                <span class="card-icon"><img src="images/award.png" height="270px" width="200px"></span>
+                <h3>Awards</h3>
+                <p>Problem Solving (Intermidiate)<br>Certification By HackerRank<br>2025</p>
+            </div>
+        </div>
+
+        <h3
+            style="text-align: center; color: var(--accent-primary); font-size: 32px; margin-top: 80px; margin-bottom: 30px;">
+            My Journey
+        </h3>
+        <div class="journey-timeline">
+            <div class="journey-item">
+                <div class="journey-image"><img src="images/begin.png" height="200px" width="200px"></div>
+                <div class="journey-description">
+                    <h3>Education Begins</h3>
+                    <p>Started my journey in Computer Science, building a strong foundation in programming and software
+                        development.</p>
+                </div>
+                <div class="journey-dot"></div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-image"><img src="images/coding.png" height="200px" width="200px"></div>
+                <div class="journey-description">
+                    <h3>First Code</h3>
+                    <p>Wrote my first lines of code and fell in love with the endless possibilities of web development.
+                    </p>
+                </div>
+                <div class="journey-dot"></div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-image"><img src="images/first_project.png" height="200px" width="200px"></div>
+                <div class="journey-description">
+                    <h3>First Project</h3>
+                    <p>Launched my first web application, learning valuable lessons about user experience and design.
+                    </p>
+                </div>
+                <div class="journey-dot"></div>
+            </div>
+            <div class="journey-item">
+                <div class="journey-image"><img src="images/learning.png" height="200px" width="200px"></div>
+                <div class="journey-description">
+                    <h3>Continuous Learning</h3>
+                    <p>Embraced new technologies and frameworks, constantly evolving my skill set and expertise.</p>
+                </div>
+                <div class="journey-dot"></div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-image"><img src="images/present.png" height="200px" width="200px"></div>
+                <div class="journey-description">
+                    <h3>Present Day</h3>
+                    <p>Currently a student, eager to apply my skills and creativity to real-world projects and make an
+                        impact in the tech industry.</p>
+                </div>
+                <div class="journey-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <span class="skill-icon">🌐</span>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill-item">
+                <span class="skill-icon">🎨</span>
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill-item">
+                <span class="skill-icon">⚡</span>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-item">
+                <span class="skill-icon"><img src="images/connection.png" height="100px"></span>
+                <h3>DSA</h3>
+            </div>
+            <div class="skill-item">
+                <span class="skill-icon">📱</span>
+                <h3>Responsive</h3>
+            </div>
+            <div class="skill-item">
+                <span class="skill-icon">🔧</span>
+                <h3>Git</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="fade-in">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image"><img src="images/parking_system.png" height="250px" width="400px"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Smart Car Parking System</h3>
+                    <p style="color: var(--text-secondary);">
+                        A C-based Smart Car Parking System optimized using a B+ Tree for efficient O(log n) slot
+                        allocation. It features tier-based parking, dynamic billing with discounts, membership upgrades,
+                        and detailed high-value customer reporting for streamlined management and enhanced performance.
+                    </p>
+                    <div class="project-buttons">
+                        <button class="btn btn-primary" onclick="openModal('project1')">Watch Demo🎬</button>
+                        <a href="https://github.com/Sanika810/Smart-Car-Parking-System" class="btn btn-secondary"
+                            target="_blank">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="project-card">
+                <div class="project-image"><img src="images/library_management.png" height="250px" width="400px"></div>
+                <div class="project-content">
+                    <h3 class="project-title"> Library Management System</h3>
+                    <p style="color: var(--text-secondary);">
+                        A Java-based Library Management System that enables secure admin and student logins, book
+                        management, and borrowing with file-based data storage, fine calculation, and exception handling
+                        for smooth operations.
+                    </p>
+                    <div class="project-buttons">
+                        <button class="btn btn-primary" onclick="openModal('project2')">Watch Demo🎬</button>
+                        <a href="https://github.com/Sanika810/Library-Management-System" class="btn btn-secondary"
+                            target="_blank">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="project-card">
+                <div class="project-image"><img src="images/attendance_tracker.png" height="250px" width="400px"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Assignment And Attendance tracker</h3>
+                    <p style="color: var(--text-secondary);">
+                        A responsive web application that helps students manage assignments and track attendance. Built
+                        using HTML, CSS, JavaScript, and Chart.js, it offers client-side authentication, deadline
+                        tracking with a calendar view, and interactive visual analytics for better productivity and
+                        progress monitoring.
+                    </p>
+                    <div class="project-buttons">
+                        <button class="btn btn-primary" onclick="openModal('project3')">Watch Demo🎬</button>
+                        <a href="https://github.com/Sanika810/Assignment-and-Attendance-Tracker"
+                            class="btn btn-secondary" target="_blank">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder=" " required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="6" placeholder=" " required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+
+            <div class="social-links">
+                <a href="mailto:budhesanika.email@example.com" class="social-icon" title="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                </a>
+                <a href="https://instagram.com/sanikabudhe08" class="social-icon" title="Instagram" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2m-.2 2C5.6 4 4 5.6 4 7.6v8.8C4 18.4 5.6 20 7.6 20h8.8c2 0 3.6-1.6 3.6-3.6V7.6C20 5.6 18.4 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/sanika-budhe-2a11a2334/" class="social-icon" title="LinkedIn"
+                    target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/Sanika810" class="social-icon" title="GitHub" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="position: relative; z-index: 1; text-align: center;">
+            <div class="avatar"
+                style="margin: 0 auto 30px; width: 300px; height: 300px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #e77a3f;">
+                <video id="footerVideo" src="videos/social_media.mp4" autoplay loop muted playsinline
+                    style="width: 100%; height: 100%; object-fit: contain;">
+                </video>
+            </div>
+
+            <p style="color: var(--text-secondary); margin-bottom: 15px; font-size: 18px;">
+                Crafted with ❤️ and ☕ by Sanika
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px;">
+                © 2025 All rights reserved
+            </p>
+        </div>
+
+        <script>
+            const vid = document.getElementById("footerVideo");
+            vid.playbackRate = 0.5; 
+        </script>
+    </footer>
+
+
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">×</span>
+            <h2 id="modalTitle" style="color: var(--accent-primary); margin-bottom: 20px; font-size: 32px;">
+                Project Demo
+            </h2>
+            <p id="modalDescription"
+                style="color: var(--text-secondary); margin-bottom: 20px; font-size: 16px; line-height: 1.6;">
+                This is a placeholder for the project demo. In a real scenario, you would embed a video or interactive
+                demo here.
+            </p>
+
+            <div id="modalTech" class="tech-used"
+                style="color: var(--text-secondary); margin-bottom: 25px; font-size: 15px;">
+            </div>
+
+            <div class="video-container">
+                <video id="projectVideo" controls autoplay muted playsinline>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
