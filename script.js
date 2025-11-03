@@ -216,7 +216,7 @@ function openModal(projectId) {
     // Display technologies used
     modalTech.innerHTML = `<strong>Technologies Used:</strong> ${projectData[projectId].technologies.join(', ')}`;
 
-    //  Update video
+    // Update video
     source.src = projectData[projectId].video;
     video.load();
     video.play();
@@ -257,6 +257,59 @@ function handleSubmit(e) {
     alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon!`);
     e.target.reset();
 }
+
+// ===== FAST LOADING OPTIMIZATIONS =====
+
+// Image loading optimization
+function optimizeImageLoading() {
+    // Add loaded class to images when they're loaded
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        if (img.complete) {
+            img.classList.add('loaded');
+        } else {
+            img.addEventListener('load', function() {
+                this.classList.add('loaded');
+            });
+            
+            // Fallback in case load event doesn't fire
+            setTimeout(() => {
+                if (!img.classList.contains('loaded') && img.complete) {
+                    img.classList.add('loaded');
+                }
+            }, 1000);
+        }
+    });
+}
+
+// Video loading optimization
+function optimizeVideoLoading() {
+    const videos = document.querySelectorAll('video');
+    
+    videos.forEach(video => {
+        // Set video to load metadata only for faster initial load
+        video.preload = 'metadata';
+        
+        // Load full video when it's near the viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    // Switch to auto preload when video is visible
+                    video.preload = 'auto';
+                    observer.unobserve(video);
+                }
+            });
+        }, { rootMargin: '100px' });
+        
+        observer.observe(video);
+    });
+}
+
+// Initialize all optimizations when page loads
+window.addEventListener('load', function() {
+    optimizeImageLoading();
+    optimizeVideoLoading();
+});
 
 // Console Easter Egg
 console.log('%c🚀 Welcome to my Portfolio!', 'font-size: 24px; color: #ff8906; font-weight: bold;');

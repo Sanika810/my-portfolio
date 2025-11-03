@@ -543,7 +543,7 @@ section {
 /* Enhanced About Section */
 .about-content {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* balanced layout */
+    grid-template-columns: 1.2fr 1fr;
     gap: 60px;
     align-items: center;
     margin-bottom: 60px;
@@ -556,7 +556,7 @@ section {
 }
 
 .about-avatar {
-    width: 600px;             /* ⚖️ Moderate width */
+    width: 600px;
     height: auto;
     aspect-ratio: 4 / 3;
     border-radius: 30px;
@@ -576,7 +576,7 @@ section {
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* ⚡ faster toggle */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .avatar-img.visible {
@@ -1346,6 +1346,45 @@ footer {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ===== FAST LOADING OPTIMIZATIONS ===== */
+/* Improve image rendering */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Add smooth loading for images */
+.avatar img,
+.about-avatar img,
+.card-icon img,
+.journey-image img,
+.skill-icon img,
+.project-image img {
+    transition: opacity 0.3s ease;
+}
+
+/* Initially set lower opacity for lazy images */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Fade in when loaded */
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Critical image above the fold - load immediately */
+.avatar img[loading="eager"] {
+    opacity: 1;
+}
+
+/* Optimize video rendering */
+video {
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* Mobile Responsive */
