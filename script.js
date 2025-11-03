@@ -49,18 +49,6 @@ function toggleTheme() {
     toggleBtn.textContent = newTheme === 'light' ? '🌙' : '🌞';
 }
 
-// About Avatar Image Toggling - RESTORED
-const avatar = document.getElementById('aboutAvatar');
-const imgs = avatar.querySelectorAll('.avatar-img');
-let showingFirst = true;
-
-// Automatically toggle between images every 4 seconds
-setInterval(() => {
-    showingFirst = !showingFirst;
-    imgs.forEach(img => img.classList.remove('visible'));
-    imgs[showingFirst ? 0 : 1].classList.add('visible');
-}, 4000);
-
 // Mobile Menu Toggle
 function toggleMobileMenu() {
     const navLinks = document.getElementById('navLinks');
