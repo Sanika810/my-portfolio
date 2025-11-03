@@ -49,6 +49,7 @@ function toggleTheme() {
     toggleBtn.textContent = newTheme === 'light' ? '🌙' : '🌞';
 }
 
+// About Avatar Image Toggling - RESTORED
 const avatar = document.getElementById('aboutAvatar');
 const imgs = avatar.querySelectorAll('.avatar-img');
 let showingFirst = true;
@@ -58,7 +59,7 @@ setInterval(() => {
     showingFirst = !showingFirst;
     imgs.forEach(img => img.classList.remove('visible'));
     imgs[showingFirst ? 0 : 1].classList.add('visible');
-}, 1800);
+}, 4000);
 
 // Mobile Menu Toggle
 function toggleMobileMenu() {
